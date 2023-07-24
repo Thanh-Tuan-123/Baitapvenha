@@ -1,0 +1,61 @@
+Bai 1: Tong so nut tren bien so xe
+
+#include <iostream>
+using namespace std;
+int main() {
+    cout<<"Nhap so xe (gom 4 chu so): ";
+    int n;
+    cin>>n;
+    int nut= 0;
+    while(n>0) {
+        nut= nut+ n% 10;
+        n= n / 10;
+    }
+    cout<<"So nut cua bien so xe la: "<<nut% 10<<endl;
+    return 0;
+}
+
+Bai 2: In ky tu thuong ra in hoa
+
+#include <iostream>
+#include <cctype>
+using namespace std;
+int main() {
+    char lowercaseChar;
+    cout<<"Nhap mot ky tu thuong: ";
+    cin>>lowercaseChar;
+
+    char uppercaseChar= toupper(lowercaseChar);
+    cout<<"Ky tu chu hoa tuong ung: "<<uppercaseChar<<endl;
+    return 0;
+}
+
+Bai 3: So lon nhat, so nho nhat trong 3 so nguyen
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b, c;
+    cout<<"Nhap 3 so nguyen: ";
+    cin>>a>>b>>c;
+    int maxNumber, minNumber;
+    // Tim so lon nhat
+    maxNumber= a; // Gia su so dau tien la so lon nhat
+    if (b> maxNumber) {
+        maxNumber= b;
+    }
+    if (c> maxNumber) {
+        maxNumber= c;
+    }
+    // Tim so nho nhat
+    minNumber= a; // Gia su so dau tien là so nho nhat
+    if (b< minNumber) {
+        minNumber= b;
+    }
+    if (c< minNumber) {
+        minNumber = c;
+    }
+    cout<<"So lon nhat la: "<<maxNumber<<endl;
+    cout<<"So nho nhat la: "<<minNumber<<endl;
+    return 0;
+}
